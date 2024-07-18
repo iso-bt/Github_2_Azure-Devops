@@ -46,6 +46,20 @@ Write-Host "Scripts have been downloaded, moved, and win_scheduler.ps1 has been 
 
 ## Yapılması gerekenler
 
+Windows Enviroment Variable olarak aşağıda yer alan değişkenleri tanımlamanız gerekir.
+- GITHUB_USERNAME
+- GITHUB_PERSONAL_ACCESS_TOKEN
+- AZURE_ORG_URL
+- AZURE_PERSONAL_ACCESS_TOKEN
+
+Değişkenlerin detayları:
+- GITHUB_USERNAME: Github kullanıcı adınız
+- GITHUB_PERSONAL_ACCESS_TOKEN: Github üzerinden alacağınız PAM Token. [Github PAM Linki](https://github.com/settings/tokens).
+- AZURE_ORG_URL: Azure Devops Server url'i 
+- AZURE_PERSONAL_ACCESS_TOKEN: Azure Devops Server içerisinde oluşturmanız gereken PAM Token. Kullanıcı ayarları altında yer alan security sayfasından oluşturulabilmektedir.
+
+##Manuel Çalıştırma
+
 Otomasyon haricinde kodları kendiniz çalıştırmak isterseniz. Release kısmından kodları indirebilirsiniz.
 
 - [Otomasyon Script](https://github.com/iso-bt/Github_2_Azure-Devops/releases/download/0.0.1/automation.ps1)
