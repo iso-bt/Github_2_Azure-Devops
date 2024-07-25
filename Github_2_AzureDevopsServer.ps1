@@ -164,10 +164,10 @@ function CloneAndPushRepo {
     Write-Log "Starting: Cloning GitHub repo: $repoName"
     try {
         $localRepoPath = "$tempRepoDir\$repoName"
-        git clone $repoCloneUrl $localRepoPath
+        git clone --mirror $repoCloneUrl $localRepoPath
         Set-Location -Path $localRepoPath
         git remote set-url origin $azureProjectUrl
-        git push --all
+        git push --mirror
         Set-Location -Path $tempRepoDir
         Write-Log "Completed: Cloning and pushing GitHub repo: $repoName to Azure DevOps project."
     } catch {
